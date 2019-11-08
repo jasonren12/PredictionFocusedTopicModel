@@ -48,7 +48,7 @@ def fit(model, W, y, lr, lambd, num_epochs, batch_size,
       if (y_thresh and val_yscore < y_thresh) or (c_thresh and c > c_thresh):
          save = True
       if save:
-         path = DATA_PATH + f"{model.name}_ y{val_yscore:.2f}_c{c:.2f}.pt"
+         path = f"models/{model.name}_ y{val_yscore:.2f}_c{c:.2f}.pt"
          torch.save(model.state_dict(), path)
     
   # save last model if no thresholds   
@@ -57,7 +57,7 @@ def fit(model, W, y, lr, lambd, num_epochs, batch_size,
       model, W, W_val.to(device), y_val.to(device), 
       tot / W.sum(), num_epochs,  version
     )
-    path = DATA_PATH + f"{model.name}_ y{val_yscore:.2f}_c{c:.2f}.pt"
+    path = f"models/{model.name}_ y{val_yscore:.2f}_c{c:.2f}.pt"
     torch.save(model.state_dict(), path)
 
   return 

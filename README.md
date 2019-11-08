@@ -6,7 +6,7 @@ Implementation of Ren et. al. Prediction Focused Topic Models (https://arxiv.org
 ```
 python main.py
 ```
-Will train a model with the default parameters:
+Will train a model on the Pang and Lee Movie Review dataset (2005) with the default parameters:
 ```
 1. --K 5: Number of Topics
 2. --model pfslda: Which model (sLDA or pf-sLDA) to train

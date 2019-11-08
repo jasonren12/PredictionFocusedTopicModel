@@ -15,11 +15,11 @@ def main():
       help='Number of topics'
   )
   parser.add_argument(
-      '--model', choices=['slda', 'pfslda'], default='slda',
+      '--model', choices=['slda', 'pfslda'], default='pfslda',
       help='Specify which model to train'
   )
   parser.add_argument(
-      '--p', type=float, default=0.10,
+      '--p', type=float, default=0.15,
       help='Value for the switch prior for pf-sLDA'
   )
   parser.add_argument(
@@ -27,7 +27,7 @@ def main():
       help='Specify if alpha is fixed'
   )
   parser.add_argument(
-      '--path', type=str,
+      '--path', type=str, default=None,
       help='Path to saved model to load before training'
   )
   parser.add_argument(
