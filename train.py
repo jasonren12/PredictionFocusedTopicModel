@@ -32,6 +32,8 @@ def fit(
     save model when val yscore or coherence are better than their 
     thresholds. O/w save final model after num_epochs.
     """
+    print(f"Training {model.name} on {device}.")
+
     opt = torch.optim.Adam(model.parameters(), lr=lr)
 
     for i in range(num_epochs):
