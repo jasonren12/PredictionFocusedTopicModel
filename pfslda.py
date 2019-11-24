@@ -1,6 +1,8 @@
 #@title vsLDA  Theta GD
 import torch
 import torch.nn as nn
+import torch.distributions as ds
+from opt_einsum import contract
 from util import s_term_normal, s_term_bernoulli
 
 #@title pf-sLDA
