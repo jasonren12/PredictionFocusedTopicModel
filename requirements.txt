@@ -1,5 +1,5 @@
 certifi==2019.9.11
-joblib==0.14.0
+joblib==1.2.0
 numpy==1.17.4
 opt-einsum==3.1.0
 scikit-learn==0.21.3
